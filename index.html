@@ -1,358 +1,446 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Amor pro beauty - косметолог Анна Морохотова, Пермь</title>
-<meta name="description" content="Amor pro beauty, Пермь, улица Баумана 23. Врач-косметолог Анна Морохотова: губы и филлеры, ботулотоксин, биоревитализация, плазмолифтинг, нитевой лифтинг, броулифт и блефаропластика, липоредукция. Цены на сайте.">
+<title>Amor pro beauty - врач-косметолог Анна Морохотова, Пермь</title>
+<meta name="description" content="Amor pro beauty, Пермь, улица Баумана 23. Врач-косметолог Анна Морохотова: губы и филлеры, ботулотоксин, биоревитализация, плазмолифтинг, нити, броулифт и блефаропластика, липоредукция. Открытый прайс, рейтинг 5,0 в 2ГИС.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@200;300;400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%232b241b'/><text x='32' y='46' font-size='34' font-family='Georgia,serif' text-anchor='middle' fill='%23b08b4f'>A</text></svg>">
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#F5F0E7; --bg-2:#EBE3D5; --card:#FFFDF8;
-  --ink:#2B241B; --ink-2:#6B6152; --line:#E2D8C6;
-  --accent:#A98652; --accent-2:#8C6E41; --accent-soft:#EFE5D2; --brand:#A98652; --star:#B0873A; --deep:#2B241B;
-  --linen:#C5B9A7;
-  --radius:18px;
+  /* палитра снята с логотипа: льняной беж, латунь, эспрессо */
+  --bg:#FAF6EF; --bg2:#FFFFFF; --ink:#2B241B; --muted:#867B6B;
+  --deep:#2B241B; --deep-d:#1C1711; --deep-soft:#F2EBDF;
+  --gold:#B08B4F; --gold-d:#8F6F3B; --gold-lt:#E3C68C;
+  --line:#E9E0D2; --ok:#6E8C5A;
+  --radius:18px; --wrap:1280px;
+  --shadow:0 18px 50px rgba(60,45,25,.14);
+  --shadow-s:0 8px 24px rgba(60,45,25,.09);
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Manrope',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;
 }
+*{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font-family:Manrope,-apple-system,Segoe UI,sans-serif;font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased}
-h1,h2,h3,.serif{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;line-height:1.15;letter-spacing:.2px}
-.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);
+     font-size:clamp(16px,.42vw + 15px,18.5px);line-height:1.62;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 clamp(20px,3vw,44px)}
 a{color:inherit}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 28px;border-radius:100px;font-size:15px;font-weight:500;text-decoration:none;border:1px solid transparent;transition:.2s;white-space:nowrap}
-.btn-main{background:var(--accent);color:#fff}
-.btn-main:hover{background:var(--accent-2)}
-.btn-ghost{border-color:var(--line);background:transparent;color:var(--ink)}
-.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
-.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:600}
+img{max-width:100%}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.12;letter-spacing:-.01em}
+h1 em,h2 em{font-style:italic;color:var(--gold)}
+section{padding:clamp(56px,6.2vw,112px) 0}
 
-/* demo plaque */
-.demo{background:var(--deep);color:rgba(255,255,255,.82);font-size:13px;text-align:center;padding:14px 24px;letter-spacing:.02em}
+.demo{background:var(--deep-d);color:#EFE9E0;text-align:center;font-size:13px;padding:9px 16px;line-height:1.45;font-weight:300}
 .demo b{color:#fff;font-weight:600}
 
-/* header */
-header{position:fixed;top:0;left:0;right:0;z-index:60;transition:background .35s,border-color .35s,box-shadow .35s;border-bottom:1px solid transparent}
-header.solid{background:rgba(245,240,231,.94);backdrop-filter:blur(12px);border-bottom-color:var(--line)}
-.hd{display:flex;align-items:center;gap:34px;height:82px}
-.logo{display:flex;align-items:center;opacity:0;pointer-events:none;transition:opacity .35s;text-decoration:none}
-header.solid .logo{opacity:1;pointer-events:auto}
-.nav{display:flex;gap:32px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;color:rgba(255,255,255,.88)}
-.nav a{text-decoration:none;transition:color .25s;white-space:nowrap}
-.nav a:hover{color:#fff}
-header.solid .nav{color:var(--ink-2)}
-header.solid .nav a:hover{color:var(--accent)}
-.hd-r{display:flex;align-items:center;gap:26px;margin-left:auto}
-.hd-tel,.hd-hours{font-size:14.5px;text-decoration:none;white-space:nowrap;color:#fff;letter-spacing:.02em}
-.hd-hours{color:rgba(255,255,255,.8)}
-header.solid .hd-tel{color:var(--ink)}
-header.solid .hd-hours{color:var(--ink-2)}
-
-/* cover */
-.cover{position:relative;background:var(--deep);color:#fff;min-height:100svh;display:flex;flex-direction:column;
-  justify-content:space-between;padding:118px 0 0;overflow:hidden}
-.cover::after{content:"";position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(120% 82% at 50% 6%,rgba(169,134,82,.34),transparent 64%)}
-.cover-in{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
-  text-align:center;padding:26px 24px 40px}
-.cover-logo{width:min(660px,86vw);border-radius:16px;overflow:hidden;border:1px solid rgba(212,183,128,.42);
-  box-shadow:0 26px 60px rgba(0,0,0,.34)}
-.cover-logo img{width:100%;height:auto;display:block}
-.cover-mark-txt{text-align:center;line-height:1}
-.cm-name{font-family:'Jost',Manrope,sans-serif;font-weight:200;font-size:clamp(58px,10.4vw,146px);
-  letter-spacing:.055em;color:#fff;line-height:.95}
-.cm-sub{font-family:'Jost',Manrope,sans-serif;font-weight:300;font-size:clamp(14px,2.1vw,26px);
-  letter-spacing:.42em;text-transform:uppercase;color:rgba(255,255,255,.88);margin-top:16px;padding-left:.42em}
-.cm-name-sm{font-family:'Jost',Manrope,sans-serif;font-weight:400;font-size:20px;letter-spacing:.2em;color:var(--accent);text-transform:uppercase}
-.cover-sub{display:flex;align-items:center;gap:18px;margin-top:30px;font-size:13px;letter-spacing:.26em;
-  text-transform:uppercase;color:rgba(255,255,255,.9)}
-.cover-sub span{display:block;width:44px;height:1px;background:rgba(255,255,255,.55)}
-.cover-lead{margin-top:28px;max-width:46em;font-size:17px;line-height:1.65;color:rgba(255,255,255,.78)}
-.cover-cta{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap;justify-content:center}
-.btn-light{background:#F2ECE1;color:#2B241B}
-.btn-light:hover{background:#fff}
-.btn-outline{border-color:rgba(255,255,255,.45);color:#fff}
-.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.08)}
-.cover-stats{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,1fr);
-  border-top:1px solid rgba(255,255,255,.16)}
-.cover-stats>div{padding:26px 30px;text-align:center;border-left:1px solid rgba(255,255,255,.13)}
-.cover-stats>div:first-child{border-left:0}
-.cover-stats b{display:block;font-family:'Cormorant Garamond',serif;font-size:25px;font-weight:600;line-height:1.2}
-.cover-stats span{display:block;margin-top:5px;font-size:12.5px;color:rgba(255,255,255,.66)}
-
-section{padding:82px 0}
-.sec-head{max-width:660px;margin-bottom:44px}
-.sec-head h2{font-size:clamp(30px,3.6vw,42px);margin:12px 0 12px}
-.sec-head p{color:var(--ink-2)}
-
-/* services */
-.price-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
-.pcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px 30px}
-.pcard h3{font-size:25px;margin-bottom:6px}
-.pcard .sub{font-size:13px;color:var(--ink-2);margin-bottom:18px}
-.prow{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:15px}
-.prow:last-child{border-bottom:0}
-.prow span:last-child{font-weight:600;white-space:nowrap;color:var(--ink-2)}
-.price-note{margin-top:26px;font-size:13.5px;color:var(--ink-2)}
-
-/* about */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
-.about-grid p{color:var(--ink-2);font-size:16.5px;margin-bottom:16px}
-.about-grid p:last-child{margin-bottom:0}
-.about-grid h2{font-size:clamp(30px,3.6vw,42px);margin:12px 0 20px}
-.sign{margin-top:26px;font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--ink)}
-.sign span{display:block;font-family:Manrope,sans-serif;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-top:4px}
-.facts{display:grid;gap:14px}
-.fact{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 22px}
-.fact b{display:block;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600}
-.fact span{display:block;font-size:13.5px;color:var(--ink-2);margin-top:2px}
-
-/* gallery */
-.g-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.g{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--bg-2);transition:transform .35s cubic-bezier(.2,.7,.3,1),box-shadow .35s;will-change:transform}
-.g img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;transition:transform .55s cubic-bezier(.2,.7,.3,1)}
-.g figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 16px 14px;color:#fff;font-size:13.5px;background:linear-gradient(transparent,rgba(43,36,27,.68));transition:opacity .3s}
-.g:hover{transform:translateY(-4px) scale(1.025);box-shadow:0 18px 40px rgba(70,55,30,.18);z-index:2}
-.g:hover img{transform:scale(1.07)}
-.ph{width:100%;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;
-  background:repeating-linear-gradient(45deg,#EEE5D5,#EEE5D5 12px,#E6DBC7 12px,#E6DBC7 24px);
-  color:#9C8C71;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
-@media(hover:none){.g:hover{transform:none;box-shadow:none}.g:hover img{transform:none}}
-@media(prefers-reduced-motion:reduce){.g,.g img{transition:none}.g:hover{transform:none}.g:hover img{transform:none}}
-
-/* reviews */
-.r-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.r{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
-.stars{color:var(--star);letter-spacing:3px;font-size:14px;margin-bottom:14px}
-.r p{font-size:15px;color:var(--ink-2)}
-.r .who{margin-top:18px;font-size:14px;font-weight:600}
-.r .when{font-size:13px;color:var(--ink-2)}
-
-/* contacts */
-.c-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
-.c-list{display:grid;gap:22px;margin-top:8px}
-.c-row .k{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:5px}
-.c-row .v{font-size:17px}
-.c-row .v a{text-decoration:none}
-.c-row small{display:block;color:var(--ink-2);font-size:13.5px;margin-top:3px}
-.c-cta{position:relative;background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius);padding:40px 36px 36px}
-.c-cta::before,.c-cta::after{content:"";position:absolute;width:52px;height:34px;pointer-events:none;border-color:var(--brand);border-style:solid;border-width:0}
-.c-cta::before{top:16px;left:16px;border-top-width:3px;border-left-width:3px}
-.c-cta::after{bottom:16px;right:16px;border-bottom-width:3px;border-right-width:3px}
-.c-cta h3{font-size:28px;margin-bottom:10px}
-.c-cta p{color:var(--ink-2);font-size:15px;margin-bottom:24px}
-.c-cta .btn{width:100%;margin-bottom:12px}
-
-/* legal */
-.legal{background:var(--bg-2);border-top:1px solid var(--line);padding:52px 0}
-.legal h3{font-size:24px;margin-bottom:16px}
-.legal-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px}
-.legal p,.legal li{font-size:13.5px;color:var(--ink-2);line-height:1.7}
-.legal ul{margin:0;padding-left:18px}
-.legal .warn{margin-top:16px;padding:14px 18px;border:1px solid var(--line);border-radius:12px;background:var(--card);font-size:13.5px;color:var(--ink)}
-
-footer{border-top:1px solid var(--line);padding:34px 0;font-size:13.5px;color:var(--ink-2)}
-.ft{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
-
-.mobile-bar{display:none}
-@media(max-width:1080px){.hd-hours{display:none}.nav{gap:24px}}
-@media(max-width:900px){
-  .nav{display:none}
-  .hd{height:70px}
-  .cover{padding-top:96px}
-  .cover-lead{font-size:16px}
-  .cover-stats{grid-template-columns:1fr 1fr}
-  .cover-stats>div{padding:20px 16px;border-left:1px solid rgba(255,255,255,.13);border-top:1px solid rgba(255,255,255,.13)}
-  .cover-stats>div:nth-child(odd){border-left:0}
-  .cover-stats>div:nth-child(-n+2){border-top:0}
-  .price-grid,.r-grid,.c-grid,.about-grid,.legal-grid{grid-template-columns:1fr}
-  .about-grid{gap:30px}
-  .g-grid{grid-template-columns:1fr 1fr}
-  section{padding:60px 0}
-  .logo{opacity:1;pointer-events:auto}
-  .mobile-bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;gap:10px;padding:10px 14px;background:rgba(245,240,231,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
-  .mobile-bar .btn{flex:1;padding:13px 10px;font-size:14px}
+/* шапка */
+header{position:sticky;top:0;z-index:80;background:rgba(250,246,239,.92);
+       backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;gap:18px;height:68px}
+.logo{font-family:var(--serif);font-size:24px;font-weight:700;letter-spacing:.01em;text-decoration:none;white-space:nowrap}
+.logo em{font-style:italic;color:var(--gold)}
+.menu{display:flex;gap:24px;margin-left:auto;font-size:15px;font-weight:500}
+.menu a{text-decoration:none;color:var(--muted);transition:.15s}
+.menu a:hover{color:var(--deep)}
+.burger{display:none;margin-left:auto;background:none;border:0;font-size:24px;cursor:pointer;color:var(--deep);line-height:1}
+@media(max-width:1040px){
+  .menu{position:fixed;inset:68px 0 auto 0;background:var(--bg2);flex-direction:column;
+        gap:0;padding:8px 0;box-shadow:var(--shadow);display:none}
+  .menu.open{display:flex}
+  .menu a{padding:14px 24px;border-bottom:1px solid var(--line);font-size:16px}
+  .burger{display:block}
+  header .hbtn{display:none}
 }
-@media(max-width:900px){.demo{padding-bottom:86px}}
-@media(max-width:640px){.hd-tel{display:none}.hd{gap:12px}.cm-name-sm{font-size:18px}.cover-cta .btn{width:100%}.demo{font-size:12px;padding:8px 16px}}
+
+/* кнопки */
+.btn{display:inline-block;background:var(--deep);color:#fff;text-decoration:none;
+     padding:15px 30px;border-radius:999px;font-weight:600;font-size:15px;font-family:var(--sans);
+     border:0;cursor:pointer;transition:.18s;white-space:nowrap;box-shadow:var(--shadow-s)}
+.btn:hover{background:var(--deep-d);transform:translateY(-2px)}
+.btn-gold{background:var(--gold)}
+.btn-gold:hover{background:var(--gold-d)}
+.btn-line{background:transparent;color:var(--deep);border:1.5px solid var(--deep);box-shadow:none}
+.btn-line:hover{background:var(--deep);color:#fff}
+header .hbtn{padding:10px 20px;font-size:14px}
+
+/* первый экран */
+.hero{background:linear-gradient(135deg,#1C1711 0%,#2B241B 55%,#4A3F30 100%);
+      color:#fff;padding:clamp(48px,5.4vw,104px) 0 clamp(58px,6.4vw,120px);position:relative;overflow:hidden}
+.hero:before{content:'';position:absolute;width:640px;height:640px;border-radius:50%;
+             right:-220px;top:-260px;background:rgba(176,139,79,.17)}
+.hero:after{content:'';position:absolute;width:380px;height:380px;border-radius:50%;
+            left:-160px;bottom:-200px;background:rgba(255,255,255,.05)}
+.hero .wrap{position:relative;z-index:2}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(34px,4vw,72px);align-items:center}
+@media(max-width:940px){.hero-grid{grid-template-columns:1fr;gap:36px}.hero{padding:52px 0 62px}}
+.kicker{display:inline-block;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.22);
+        padding:7px 16px;border-radius:999px;font-size:13px;font-weight:500;margin-bottom:22px}
+.hero h1{font-size:clamp(33px,4.3vw,68px);margin-bottom:clamp(14px,1.4vw,24px)}
+.hero h1 em{color:var(--gold-lt)}
+.hero .lead{font-size:clamp(16px,.9vw + 12px,21px);opacity:.92;max-width:32em;
+      margin-bottom:clamp(24px,2.4vw,38px);font-weight:300}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px}
+.hero .btn{background:#fff;color:var(--deep-d)}
+.hero .btn:hover{background:#F4EFE6}
+.hero .btn-gold{background:var(--gold);color:#fff}
+.hero .btn-gold:hover{background:var(--gold-d)}
+.hero .btn-line{background:transparent;border-color:rgba(255,255,255,.5);color:#fff}
+.hero .btn-line:hover{background:#fff;color:var(--deep-d)}
+.facts{display:grid;grid-template-columns:repeat(4,auto);justify-content:start;
+       gap:clamp(22px,2.6vw,52px);padding-top:clamp(22px,2vw,32px);
+       border-top:1px solid rgba(255,255,255,.18)}
+.fact b{display:block;font-family:var(--serif);font-size:clamp(26px,2.1vw,40px);line-height:1}
+.fact span{font-size:13px;opacity:.75;font-weight:300}
+@media(max-width:560px){.facts{grid-template-columns:repeat(2,auto);gap:20px 34px}}
+
+/* карточка с логотипом */
+.hero-photo{position:relative}
+.hero-photo .frame{aspect-ratio:1/1;border-radius:22px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.34);
+  border:1px solid rgba(227,198,140,.35);background:#C9BDAB}
+.hero-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.badge{position:absolute;top:18px;left:-14px;background:#fff;color:var(--deep-d);
+  padding:10px 18px;border-radius:999px;font-size:13.5px;font-weight:600;box-shadow:var(--shadow);
+  display:flex;align-items:center;gap:8px}
+.badge i{width:8px;height:8px;border-radius:50%;background:var(--ok);display:block}
+.hero-caption{position:absolute;left:18px;right:18px;bottom:-40px;background:#fff;color:var(--ink);
+  border-radius:16px;padding:18px 20px;box-shadow:var(--shadow)}
+.hero-caption h3{font-size:20px;margin-bottom:2px}
+.hero-caption .role{font-size:13px;color:var(--muted);margin-bottom:12px}
+.hero-caption .stats{display:flex;gap:18px;flex-wrap:wrap}
+.hero-caption .stat b{display:block;font-family:var(--serif);font-size:19px;color:var(--deep)}
+.hero-caption .stat span{font-size:11.5px;color:var(--muted)}
+@media(max-width:940px){.hero-caption{position:static;margin-top:16px}.badge{left:14px}}
+
+/* бегущая строка */
+.strip{background:var(--deep-d);color:#EAE3D8;overflow:hidden;padding:15px 0;white-space:nowrap}
+.strip-track{display:inline-flex;animation:scroll 40s linear infinite}
+.strip-item{padding:0 26px;font-size:14px;font-weight:300;letter-spacing:.04em;text-transform:uppercase}
+.strip-item:after{content:'\2726';margin-left:26px;color:var(--gold);font-size:11px}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.strip-track{animation:none}}
+
+/* заголовки секций */
+.sec-head{margin-bottom:clamp(28px,3vw,52px);max-width:46em}
+.sec-head .tag{color:var(--gold);font-size:12.5px;font-weight:700;letter-spacing:.13em;
+               text-transform:uppercase;display:block;margin-bottom:12px}
+.sec-head h2{font-size:clamp(27px,3.1vw,50px);margin-bottom:12px}
+.sec-head p{color:var(--muted);font-weight:300}
+
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+/* прайс */
+.light{background:var(--bg2)}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.tab{padding:12px 24px;border-radius:999px;border:1.5px solid var(--line);background:#fff;
+     cursor:pointer;font-family:var(--sans);font-size:15px;font-weight:600;color:var(--muted);transition:.15s}
+.tab:hover{border-color:var(--deep)}
+.tab.on{background:var(--deep);border-color:var(--deep);color:#fff;box-shadow:var(--shadow-s)}
+.plist{display:none;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);
+       border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-s)}
+.plist.on{display:grid}
+@media(max-width:760px){.plist.on{grid-template-columns:1fr}}
+.row{display:flex;justify-content:space-between;gap:16px;padding:15px 22px;background:#fff;
+     align-items:baseline;transition:.15s}
+.row:hover{background:var(--deep-soft)}
+.row .nm{font-size:15.5px}
+.row .nm small{display:block;font-size:12.5px;color:var(--muted);font-weight:300}
+.row .pr{font-family:var(--serif);font-size:21px;font-weight:700;white-space:nowrap;color:var(--deep)}
+.upd{font-size:12.5px;color:var(--muted);margin-top:16px;font-weight:300}
+
+/* почему */
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(16px,1.6vw,26px)}
+.why article{background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+             padding:28px;box-shadow:var(--shadow-s);transition:.2s}
+.why article:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.why .ic{width:44px;height:44px;border-radius:12px;background:var(--deep-soft);color:var(--gold);
+         display:grid;place-items:center;font-size:20px;margin-bottom:14px;font-family:var(--serif);font-weight:700}
+.why h3{font-size:21px;margin-bottom:7px}
+.why p{font-size:14.5px;color:var(--muted);font-weight:300}
+
+/* о враче */
+.doc-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,3.4vw,58px);align-items:start}
+@media(max-width:940px){.doc-grid{grid-template-columns:1fr}}
+.q-big{font-family:var(--serif);font-size:clamp(21px,1.9vw,32px);line-height:1.3;color:var(--deep);
+       border-left:3px solid var(--gold);padding:2px 0 2px 22px;margin-bottom:16px}
+.q-big:before{content:'\00AB'}
+.q-big:after{content:'\00BB'}
+.q-from{font-size:14px;color:var(--muted);font-weight:300;margin-bottom:24px}
+.doc-txt p{color:var(--muted);font-weight:300;margin-bottom:14px}
+.doc-facts{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:8px}
+.doc-facts div{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:16px}
+.doc-facts b{display:block;font-family:var(--serif);font-size:21px;color:var(--deep)}
+.doc-facts span{font-size:13px;color:var(--muted);font-weight:300}
+@media(max-width:520px){.doc-facts{grid-template-columns:1fr}}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);
+      padding:32px;box-shadow:var(--shadow)}
+.card h3{font-size:26px;margin-bottom:6px}
+.card .sub{font-size:15px;color:var(--muted);margin-bottom:20px;font-weight:300}
+.acts{display:grid;gap:10px}
+.acts .btn{width:100%;text-align:center;padding:16px 22px}
+.note{font-size:12.5px;color:var(--muted);margin-top:14px;font-weight:300}
+
+/* работы */
+.g-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,1.4vw,20px)}
+@media(max-width:860px){.g-grid{grid-template-columns:1fr 1fr}}
+.g{border-radius:16px;overflow:hidden;border:1px solid var(--line);
+   background:var(--bg2);box-shadow:var(--shadow-s)}
+.g img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
+.ph{aspect-ratio:4/5;display:grid;place-items:center;text-align:center;padding:20px;
+    background:repeating-linear-gradient(45deg,#F1E9DB,#F1E9DB 12px,#EAE0CE 12px,#EAE0CE 24px);
+    color:#9C8C71;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.g figcaption{padding:14px 18px;font-size:14px;color:var(--muted);font-weight:300;border-top:1px solid var(--line)}
+
+/* отзывы */
+.rv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,1.6vw,24px)}
+@media(max-width:940px){.rv-grid{grid-template-columns:1fr}}
+.r{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow-s)}
+.stars{color:var(--gold);letter-spacing:3px;font-size:14px;margin-bottom:14px}
+.r p{font-size:15.5px;color:var(--muted);font-weight:300}
+.r .who{margin-top:18px;font-weight:600;font-size:15px}
+.r .when{font-size:13px;color:var(--muted);font-weight:300}
+
+/* контакты */
+.c-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,3.4vw,58px);align-items:start}
+@media(max-width:940px){.c-grid{grid-template-columns:1fr}}
+.c-list{display:grid;gap:20px}
+.c-row .k{font-size:12.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:4px}
+.c-row .v{font-size:18px}
+.c-row .v a{text-decoration:none;border-bottom:1px solid var(--line)}
+.c-row small{display:block;color:var(--muted);font-size:14px;margin-top:4px;font-weight:300}
+
+/* правовое */
+.legal{background:var(--deep);color:#E8E1D6}
+.legal h3{font-size:24px;margin-bottom:14px;color:#fff}
+.legal-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(26px,3vw,52px)}
+@media(max-width:860px){.legal-grid{grid-template-columns:1fr}}
+.legal p,.legal li{font-size:14px;font-weight:300;line-height:1.72;color:rgba(232,225,214,.82)}
+.legal ul{margin:8px 0 0;padding-left:18px}
+.legal b{color:#fff;font-weight:600}
+.legal a{color:#fff}
+.legal .warn{margin:14px 0;padding:14px 18px;border:1px solid rgba(227,198,140,.4);border-radius:12px;
+             background:rgba(176,139,79,.14);font-size:14.5px;color:#fff;font-weight:500}
+
+footer{background:var(--deep-d);color:rgba(232,225,214,.7);padding:30px 0;font-size:14px;font-weight:300}
+.ft{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.ft .logo{color:#fff;font-size:21px}
 </style>
 </head>
 <body>
 
-<header id="hd">
-  <div class="wrap hd">
-    <a class="logo" href="#top"><span class="cm-name-sm">Amor</span></a>
-    <nav class="nav">
-      <a href="#uslugi">Услуги</a>
-      <a href="#studiya">О враче</a>
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">Amor <em>pro beauty</em></a>
+    <button class="burger" id="burger" aria-label="Меню">&#9776;</button>
+    <nav class="menu" id="menu">
+      <a href="#ceny">Цены</a>
+      <a href="#pochemu">Почему сюда</a>
+      <a href="#vrach">О враче</a>
       <a href="#raboty">Работы</a>
       <a href="#otzyvy">Отзывы</a>
       <a href="#kontakty">Контакты</a>
     </nav>
-    <div class="hd-r">
-      <a class="hd-tel" href="tel:+79526621447">+7 952 662-14-47</a>
-      <span class="hd-hours">По предварительной записи</span>
-      <a class="btn btn-light" href="#kontakty">Записаться</a>
-    </div>
+    <a class="btn hbtn" href="#kontakty">Записаться</a>
   </div>
 </header>
 
 <main id="top">
 
-<section class="cover">
-  <div class="cover-in">
-    <figure class="cover-logo"><img src="logo-hero.jpg" alt="Amor pro beauty"></figure>
-    <div class="cover-sub"><span></span>Студия косметологии · Пермь<span></span></div>
-    <p class="cover-lead">Врач-косметолог Анна Морохотова. Губы и филлеры, ботулотоксин, биоревитализация, плазмолифтинг, нитевой лифтинг, броулифт и блефаропластика, липоредукция. Улица Баумана, 23. Приём по предварительной записи.</p>
-    <div class="cover-cta">
-      <a class="btn btn-light" href="tel:+79526621447">Позвонить и записаться</a>
-      <a class="btn btn-outline" href="https://vk.ru/dr_amor_pro_beauty" target="_blank" rel="noopener">Написать во ВКонтакте</a>
-    </div>
-  </div>
-  <div class="cover-stats">
-    <div><b>5,0</b><span>рейтинг в 2ГИС, 22 оценки</span></div>
-    <div><b>1 484</b><span>подписчика ВКонтакте</span></div>
-    <div><b>5 минут</b><span>среднее время ответа в ВК</span></div>
-    <div><b>Баумана, 23</b><span>первый этаж, Индустриальный</span></div>
-  </div>
-</section>
-
-<section id="uslugi">
+<section class="hero">
   <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">Услуги</div>
-      <h2>Цены без «уточняйте в личных сообщениях»</h2>
-      <p>Прайс врача-косметолога Анны Морохотовой. Итоговую стоимость доктор называет на консультации: она зависит от объёма препарата, зоны и количества процедур.</p>
-    </div>
-
-    <div class="price-grid">
-      <div class="pcard">
-        <h3>Консультация</h3>
-        <div class="sub">С неё начинается любая процедура</div>
-        <div class="prow"><span>Консультация врача-косметолога</span><span>1 000 ₽</span></div>
+    <div class="hero-grid">
+      <div>
+        <span class="kicker">Пермь · ул. Баумана, 23 · Индустриальный район</span>
+        <h1>Подчеркнём вашу красоту <em>за одну процедуру</em></h1>
+        <p class="lead">Врач-косметолог Анна Морохотова. Губы и филлеры, ботулотоксин, биоревитализация, плазмолифтинг, нитевой лифтинг, броулифт и блефаропластика, липоредукция. Приём по предварительной записи.</p>
+        <div class="hero-cta">
+          <a class="btn btn-gold" href="#ceny">Смотреть цены</a>
+          <a class="btn" href="tel:+79526621447">Позвонить</a>
+          <a class="btn btn-line" href="https://vk.ru/dr_amor_pro_beauty" target="_blank" rel="noopener">Написать во ВКонтакте</a>
+        </div>
+        <div class="facts">
+          <div class="fact"><b>5,0</b><span>рейтинг в 2ГИС</span></div>
+          <div class="fact"><b>22</b><span>оценки клиентов</span></div>
+          <div class="fact"><b>1 484</b><span>подписчика в ВК</span></div>
+          <div class="fact"><b>с 2016</b><span>сообщество ведётся</span></div>
+        </div>
       </div>
-
-      <div class="pcard">
-        <h3>Губы</h3>
-        <div class="sub">Филлеры на выбор</div>
-        <div class="prow"><span>Филлеры, Корея</span><span>7 500 ₽</span></div>
-        <div class="prow"><span>Филлеры, Россия</span><span>9 000 ₽</span></div>
-        <div class="prow"><span>Филлеры, Франция, STYLAGE s/m/l</span><span>15 000 ₽</span></div>
-      </div>
-
-      <div class="pcard">
-        <h3>Морщины</h3>
-        <div class="sub">Ботулинотерапия</div>
-        <div class="prow"><span>Ботулотоксин, Корея</span><span>от 180 ₽</span></div>
-        <div class="prow"><span>Релатокс</span><span>260 ₽</span></div>
-      </div>
-
-      <div class="pcard">
-        <h3>Биоревитализация</h3>
-        <div class="sub">Увлажнение и качество кожи</div>
-        <div class="prow"><span>Корея</span><span>от 4 500 ₽</span></div>
-        <div class="prow"><span>Реви</span><span>от 11 000 ₽</span></div>
-        <div class="prow"><span>Монако, лицо и шея</span><span>15 000 ₽</span></div>
-      </div>
-
-      <div class="pcard">
-        <h3>Плазмолифтинг</h3>
-        <div class="sub">Курсом выгоднее</div>
-        <div class="prow"><span>Одна пробирка</span><span>4 500 ₽</span></div>
-        <div class="prow"><span>Курс 5 процедур</span><span>20 000 ₽</span></div>
-        <div class="prow"><span>Курс 8 процедур</span><span>32 000 ₽</span></div>
-      </div>
-
-      <div class="pcard">
-        <h3>Нитевой лифтинг</h3>
-        <div class="sub">Подтяжка без операции</div>
-        <div class="prow"><span>Нити Коги</span><span>от 4 000 ₽</span></div>
-        <div class="prow"><span>Мононити, за единицу</span><span>от 500 ₽</span></div>
-      </div>
-
-      <div class="pcard">
-        <h3>Взгляд</h3>
-        <div class="sub">Броулифт и блефаропластика</div>
-        <div class="prow"><span>Броулифтинг</span><span>45 000 ₽</span></div>
-        <div class="prow"><span>Блефаропластика</span><span>45 000 ₽</span></div>
-      </div>
-
-      <div class="pcard">
-        <h3>Фигура и тело</h3>
-        <div class="sub">Коррекция и деликатные зоны</div>
-        <div class="prow"><span>Липоредукция</span><span>от 15 000 ₽</span></div>
-        <div class="prow"><span>Лечение гипергидроза</span><span>от 15 000 ₽</span></div>
-        <div class="prow"><span>Интимная пластика и омоложение</span><span>от 15 000 ₽</span></div>
-      </div>
-
-      <div class="pcard">
-        <h3>Биохакинг</h3>
-        <div class="sub">Внутривенные капельницы</div>
-        <div class="prow"><span>Капельница «Золушка», разово</span><span>6 000 ₽</span></div>
-        <div class="prow"><span>Капельница «Золушка», курс 5 процедур</span><span>25 000 ₽</span></div>
-      </div>
-
-      <div class="pcard">
-        <h3>Ещё в студии</h3>
-        <div class="sub">Стоимость уточняйте при записи</div>
-        <div class="prow"><span>Лазерная эпиляция</span><span>по запросу</span></div>
-        <div class="prow"><span>Увеличение ягодиц</span><span>по запросу</span></div>
-        <div class="prow"><span>Татуаж</span><span>по запросу</span></div>
-        <div class="prow"><span>Аппаратный массаж и LPG</span><span>по запросу</span></div>
+      <div class="hero-photo">
+        <div class="frame"><img src="amor-logo.jpg" alt="Логотип студии Amor pro beauty"></div>
+        <div class="badge"><i></i>Отвечает за 5 минут</div>
+        <div class="hero-caption">
+          <h3>Анна Морохотова</h3>
+          <div class="role">Врач-косметолог · Amor pro beauty</div>
+          <div class="stats">
+            <div class="stat"><b>5,0</b><span>рейтинг в 2ГИС</span></div>
+            <div class="stat"><b>1 142</b><span>фото работ в ВК</span></div>
+            <div class="stat"><b>18</b><span>отзывов</span></div>
+          </div>
+        </div>
       </div>
     </div>
-    <p class="price-note">Прайс от 12 февраля. Цены не являются публичной офертой. Действует гибкая система скидок и пакеты услуг, актуальные условия уточняйте по телефону или в сообщениях сообщества.</p>
   </div>
 </section>
 
-<section id="studiya" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-  <div class="wrap about-grid">
-    <div>
-      <div class="eyebrow">О враче</div>
-      <h2>Анна Морохотова, врач-косметолог</h2>
-      <p>Приём ведёт врач-косметолог Анна Морохотова. Направления: броулифт и блефаропластика, инъекционная косметология, липоредукция, увеличение ягодиц, лазерная эпиляция, татуаж.</p>
-      <p>Студия работает в Индустриальном районе Перми, на первом этаже дома по улице Баумана, 23. Приём по предварительной записи, свободное время подскажут по телефону или в сообщениях.</p>
-      <p>Сообщество ВКонтакте ведётся с 2016 года, в нём 1 484 подписчика и больше тысячи фотографий работ. На сообщения отвечают в среднем за пять минут.</p>
-      <div class="sign">Анна Морохотова<span>врач-косметолог</span></div>
+<div class="strip">
+  <div class="strip-track">
+    <span class="strip-item">Губы и филлеры</span><span class="strip-item">Ботулотоксин</span><span class="strip-item">Биоревитализация</span><span class="strip-item">Плазмолифтинг</span><span class="strip-item">Нитевой лифтинг</span><span class="strip-item">Броулифт</span><span class="strip-item">Блефаропластика</span><span class="strip-item">Липоредукция</span><span class="strip-item">Лазерная эпиляция</span><span class="strip-item">Татуаж</span><span class="strip-item">Биохакинг</span><span class="strip-item">Гипергидроз</span><span class="strip-item">Губы и филлеры</span><span class="strip-item">Ботулотоксин</span><span class="strip-item">Биоревитализация</span><span class="strip-item">Плазмолифтинг</span><span class="strip-item">Нитевой лифтинг</span><span class="strip-item">Броулифт</span><span class="strip-item">Блефаропластика</span><span class="strip-item">Липоредукция</span><span class="strip-item">Лазерная эпиляция</span><span class="strip-item">Татуаж</span><span class="strip-item">Биохакинг</span><span class="strip-item">Гипергидроз</span>
+  </div>
+</div>
+
+<section class="light" id="ceny">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="tag">Прайс</span>
+      <h2>Цены <em>открыто</em>, без «уточняйте в личных»</h2>
+      <p>Итоговую стоимость доктор называет на консультации: она зависит от объёма препарата, зоны и количества процедур.</p>
     </div>
-    <div class="facts">
-      <div class="fact"><b>Улица Баумана, 23</b><span>первый этаж, Индустриальный район, Пермь</span></div>
-      <div class="fact"><b>600 метров от остановки</b><span>остановка «9 Мая», рядом шесть парковочных мест</span></div>
-      <div class="fact"><b>Оплата как удобно</b><span>карта, наличные, перевод, QR-код</span></div>
-      <div class="fact"><b>Приём по записи</b><span>с 9:00, время согласуется заранее</span></div>
+
+    <div class="tabs rv">
+      <button class="tab on" data-t="lico">Лицо</button>
+      <button class="tab" data-t="lift">Лифтинг и пластика</button>
+      <button class="tab" data-t="telo">Тело и биохакинг</button>
+      <button class="tab" data-t="esche">Ещё в студии</button>
+    </div>
+
+    <div class="plist on rv" id="lico">
+      <div class="row"><span class="nm">Консультация врача-косметолога</span><span class="pr">1 000 ₽</span></div>
+      <div class="row"><span class="nm">Филлеры для губ<small>Корея</small></span><span class="pr">7 500 ₽</span></div>
+      <div class="row"><span class="nm">Филлеры для губ<small>Россия</small></span><span class="pr">9 000 ₽</span></div>
+      <div class="row"><span class="nm">Филлеры для губ<small>Франция, STYLAGE s/m/l</small></span><span class="pr">15 000 ₽</span></div>
+      <div class="row"><span class="nm">Ботулотоксин<small>Корея</small></span><span class="pr">от 180 ₽</span></div>
+      <div class="row"><span class="nm">Релатокс</span><span class="pr">260 ₽</span></div>
+      <div class="row"><span class="nm">Биоревитализация<small>Корея</small></span><span class="pr">от 4 500 ₽</span></div>
+      <div class="row"><span class="nm">Биоревитализация<small>Реви</small></span><span class="pr">от 11 000 ₽</span></div>
+      <div class="row"><span class="nm">Биоревитализация<small>Монако, лицо и шея</small></span><span class="pr">15 000 ₽</span></div>
+      <div class="row"><span class="nm">Плазмолифтинг<small>одна пробирка</small></span><span class="pr">4 500 ₽</span></div>
+      <div class="row"><span class="nm">Плазмолифтинг<small>курс 5 процедур</small></span><span class="pr">20 000 ₽</span></div>
+      <div class="row"><span class="nm">Плазмолифтинг<small>курс 8 процедур</small></span><span class="pr">32 000 ₽</span></div>
+    </div>
+
+    <div class="plist rv" id="lift">
+      <div class="row"><span class="nm">Нити Коги</span><span class="pr">от 4 000 ₽</span></div>
+      <div class="row"><span class="nm">Мононити<small>за единицу</small></span><span class="pr">от 500 ₽</span></div>
+      <div class="row"><span class="nm">Броулифтинг</span><span class="pr">45 000 ₽</span></div>
+      <div class="row"><span class="nm">Блефаропластика</span><span class="pr">45 000 ₽</span></div>
+    </div>
+
+    <div class="plist rv" id="telo">
+      <div class="row"><span class="nm">Липоредукция</span><span class="pr">от 15 000 ₽</span></div>
+      <div class="row"><span class="nm">Лечение гипергидроза</span><span class="pr">от 15 000 ₽</span></div>
+      <div class="row"><span class="nm">Интимная пластика и омоложение</span><span class="pr">от 15 000 ₽</span></div>
+      <div class="row"><span class="nm">Капельница «Золушка»<small>разовая процедура</small></span><span class="pr">6 000 ₽</span></div>
+      <div class="row"><span class="nm">Капельница «Золушка»<small>курс 5 процедур</small></span><span class="pr">25 000 ₽</span></div>
+    </div>
+
+    <div class="plist rv" id="esche">
+      <div class="row"><span class="nm">Лазерная эпиляция</span><span class="pr">по запросу</span></div>
+      <div class="row"><span class="nm">Увеличение ягодиц</span><span class="pr">по запросу</span></div>
+      <div class="row"><span class="nm">Татуаж</span><span class="pr">по запросу</span></div>
+      <div class="row"><span class="nm">Аппаратный массаж и LPG</span><span class="pr">по запросу</span></div>
+    </div>
+
+    <p class="upd">Прайс от 12 февраля. Цены не являются публичной офертой. Действует гибкая система скидок и пакеты услуг: актуальные условия уточняйте по телефону или в сообщениях.</p>
+  </div>
+</section>
+
+<section id="pochemu">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="tag">Почему сюда</span>
+      <h2>Четыре вещи, которые <em>видно сразу</em></h2>
+    </div>
+    <div class="why rv">
+      <article>
+        <div class="ic">&#9670;</div>
+        <h3>Принимает врач</h3>
+        <p>Инъекции, нити и работа с веками требуют врача. Приём ведёт врач-косметолог Анна Морохотова.</p>
+      </article>
+      <article>
+        <div class="ic">5</div>
+        <h3>Пять из пяти в 2ГИС</h3>
+        <p>22 оценки и 18 отзывов. В отзывах мастеров благодарят поимённо, отрицательных нет.</p>
+      </article>
+      <article>
+        <div class="ic">&#9711;</div>
+        <h3>Ответ за пять минут</h3>
+        <p>Сообщество ВКонтакте отмечено как быстро отвечающее: среднее время ответа пять минут.</p>
+      </article>
+      <article>
+        <div class="ic">₽</div>
+        <h3>Оплата и парковка</h3>
+        <p>Карта, наличные, перевод, QR-код. Шесть парковочных мест рядом, остановка «9 Мая» в 600 метрах.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="light" id="vrach">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="tag">О враче</span>
+      <h2>Анна <em>Морохотова</em></h2>
+    </div>
+    <div class="doc-grid">
+      <div class="doc-txt rv">
+        <div class="q-big">Твоя фея стройности, молодости и красоты</div>
+        <div class="q-from">Из закреплённой записи сообщества</div>
+        <p>Приём ведёт врач-косметолог Анна Морохотова. Направления студии: броулифт и блефаропластика, инъекционная косметология, липоредукция, увеличение ягодиц, лазерная эпиляция, татуаж.</p>
+        <p>Студия работает в Индустриальном районе Перми, на первом этаже дома по улице Баумана, 23. Приём по предварительной записи, свободное время подскажут по телефону или в сообщениях.</p>
+        <p>Сообщество ВКонтакте ведётся с 2016 года: в нём 1 484 подписчика и больше тысячи фотографий работ.</p>
+        <div class="doc-facts">
+          <div><b>Баумана, 23</b><span>первый этаж, Индустриальный район</span></div>
+          <div><b>600 метров</b><span>от остановки «9 Мая»</span></div>
+          <div><b>С 9:00</b><span>по предварительной записи</span></div>
+          <div><b>Гарантия</b><span>результата и качества услуг</span></div>
+        </div>
+      </div>
+      <div class="card rv">
+        <h3>Записаться на приём</h3>
+        <p class="sub">Опишите, что хотите сделать, и доктор подскажет, какая процедура подойдёт и сколько понадобится сеансов.</p>
+        <div class="acts">
+          <a class="btn btn-gold" href="tel:+79526621447">Позвонить +7 952 662-14-47</a>
+          <a class="btn" href="https://vk.ru/dr_amor_pro_beauty" target="_blank" rel="noopener">Написать во ВКонтакте</a>
+          <a class="btn btn-line" href="https://t.me/+79526621447" target="_blank" rel="noopener">Написать в Telegram</a>
+          <a class="btn btn-line" href="https://2gis.ru/perm/firm/70000001035677915" target="_blank" rel="noopener">Открыть на карте 2ГИС</a>
+        </div>
+        <p class="note">Форм на сайте нет: запись только напрямую, чтобы заявка не потерялась.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <section id="raboty">
   <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">Работы</div>
-      <h2>Кабинет и результаты</h2>
-      <p>Здесь встанут фотографии кабинета и результатов процедур. В сообществе ВКонтакте выложено больше тысячи снимков «до и после».</p>
+    <div class="sec-head rv">
+      <span class="tag">Работы</span>
+      <h2>Кабинет и <em>результаты</em></h2>
+      <p>Здесь встанут фотографии кабинета и согласованные снимки «до и после». В сообществе ВКонтакте выложено больше тысячи работ.</p>
     </div>
-    <div class="g-grid">
-      <figure class="g"><div class="ph">фото 1</div><figcaption>Кабинет косметологии</figcaption></figure>
-      <figure class="g"><div class="ph">фото 2</div><figcaption>Лазерная эпиляция</figcaption></figure>
-      <figure class="g"><div class="ph">фото 3</div><figcaption>Уход за лицом</figcaption></figure>
-      <figure class="g"><div class="ph">фото 4</div><figcaption>Аппаратный массаж</figcaption></figure>
-      <figure class="g"><div class="ph">фото 5</div><figcaption>Результат курса</figcaption></figure>
+    <div class="g-grid rv">
+      <figure class="g"><div class="ph">фото 1</div><figcaption>Кабинет</figcaption></figure>
+      <figure class="g"><div class="ph">фото 2</div><figcaption>Работа с губами</figcaption></figure>
+      <figure class="g"><div class="ph">фото 3</div><figcaption>Броулифт и веки</figcaption></figure>
+      <figure class="g"><div class="ph">фото 4</div><figcaption>Биоревитализация</figcaption></figure>
+      <figure class="g"><div class="ph">фото 5</div><figcaption>Липоредукция</figcaption></figure>
       <figure class="g"><div class="ph">фото 6</div><figcaption>Студия внутри</figcaption></figure>
     </div>
     <!-- ФОТО: заменить <div class="ph">…</div> на <img src="g-1.jpg" alt="…"> и так далее -->
   </div>
 </section>
 
-<section id="otzyvy" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<section class="light" id="otzyvy">
   <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">Отзывы</div>
-      <h2>Что пишут клиенты</h2>
+    <div class="sec-head rv">
+      <span class="tag">Отзывы</span>
+      <h2>Что пишут <em>клиенты</em></h2>
       <p>Отзывы из карточки 2ГИС, средняя оценка 5,0 на 22 оценках.</p>
     </div>
-    <div class="r-grid">
+    <div class="rv-grid rv">
       <div class="r">
         <div class="stars">★★★★★</div>
         <p>Была на липоредукции тела, сделали несколько зон, всё идеально. Советую.</p>
@@ -376,18 +464,20 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-size:13.5px;color:va
 </section>
 
 <section id="kontakty">
-  <div class="wrap c-grid">
-    <div>
-      <div class="eyebrow">Контакты</div>
-      <h2 style="font-size:clamp(30px,3.6vw,42px);margin:12px 0 6px">Как нас найти</h2>
-      <div class="c-list">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="tag">Контакты</span>
+      <h2>Как нас <em>найти</em></h2>
+    </div>
+    <div class="c-grid">
+      <div class="c-list rv">
         <div class="c-row">
           <div class="k">Адрес</div>
-          <div class="v">ул. Баумана, 23, первый этаж</div>
-          <small>Индустриальный район, Пермь, 614066. Остановка «9 Мая» в 600 метрах, рядом шесть парковочных мест.</small>
+          <div class="v">Пермь, ул. Баумана, 23, первый этаж</div>
+          <small>Индустриальный район, 614066. Остановка «9 Мая» в 600 метрах, рядом шесть парковочных мест.</small>
         </div>
         <div class="c-row">
-          <div class="k">Запись</div>
+          <div class="k">Режим работы</div>
           <div class="v">По предварительной записи, с 9:00</div>
           <small>Свободное время уточняйте по телефону или в сообщениях</small>
         </div>
@@ -398,20 +488,21 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-size:13.5px;color:va
         <div class="c-row">
           <div class="k">Соцсети</div>
           <div class="v"><a href="https://vk.ru/dr_amor_pro_beauty" target="_blank" rel="noopener">ВКонтакте</a> · <a href="https://t.me/+79526621447" target="_blank" rel="noopener">Telegram</a></div>
-          <small>Прайс, фотографии и запись в сообществе</small>
+          <small>Прайс, фотографии работ и запись в сообществе</small>
         </div>
         <div class="c-row">
           <div class="k">Оплата</div>
           <div class="v">Карта, наличные, перевод, QR-код</div>
         </div>
       </div>
-    </div>
-    <div class="c-cta">
-      <h3>Записаться</h3>
-      <p>Напишите или позвоните. Опишите, что хотите сделать, и мастер подскажет, какая процедура подойдёт и сколько понадобится сеансов.</p>
-      <a class="btn btn-main" href="tel:+79526621447">+7 952 662-14-47</a>
-      <a class="btn btn-ghost" href="https://vk.ru/dr_amor_pro_beauty" target="_blank" rel="noopener">Написать во ВКонтакте</a>
-      <a class="btn btn-ghost" href="https://2gis.ru/perm/firm/70000001035677915" target="_blank" rel="noopener">Открыть на карте 2ГИС</a>
+      <div class="card rv">
+        <h3>Свободное время</h3>
+        <p class="sub">Расписание меняется каждый день, поэтому актуальные окна подскажут в сообщениях. Ответ обычно приходит в течение пяти минут.</p>
+        <div class="acts">
+          <a class="btn btn-gold" href="https://vk.ru/dr_amor_pro_beauty" target="_blank" rel="noopener">Написать во ВКонтакте</a>
+          <a class="btn" href="tel:+79526621447">Позвонить +7 952 662-14-47</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -430,12 +521,12 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-size:13.5px;color:va
           Режим работы: по предварительной записи, с 9:00<br>
           Медицинская лицензия: <b>[номер и дата, обязательно: инъекции, блефаропластика, капельницы]</b>
         </p>
-        <p style="margin-top:14px">Цены, указанные на сайте, не являются публичной офертой. Стоимость определяется после консультации.</p>
+        <p style="margin-top:14px">Цены, указанные на сайте, не являются публичной офертой. Стоимость определяется после консультации. Сайт не собирает персональные данные: форм заявок нет, запись ведётся по телефону и в сообщениях.</p>
       </div>
       <div>
         <h3>Важно перед процедурой</h3>
         <div class="warn">Имеются противопоказания. Необходима консультация специалиста.</div>
-        <p style="margin-top:14px">Процедуры не проводятся при:</p>
+        <p>Процедуры не проводятся при:</p>
         <ul>
           <li>беременности и грудном вскармливании (по части процедур);</li>
           <li>онкологических заболеваниях;</li>
@@ -443,8 +534,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-size:13.5px;color:va
           <li>декомпенсированном сахарном диабете;</li>
           <li>индивидуальной непереносимости используемых препаратов.</li>
         </ul>
-        <p style="margin-top:14px">Полный перечень противопоказаний мастер уточняет на консультации. Сайт носит информационный характер и не заменяет очную консультацию.</p>
-        <p style="margin-top:14px"><a href="#pravovoe">Политика обработки персональных данных</a>: сайт не собирает персональные данные, форм заявок нет, запись ведётся по телефону и в сообщениях.</p>
+        <p style="margin-top:14px">Полный перечень противопоказаний доктор уточняет на консультации. Сайт носит информационный характер и не заменяет очный приём.</p>
       </div>
     </div>
   </div>
@@ -454,26 +544,33 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-size:13.5px;color:va
 
 <footer>
   <div class="wrap ft">
-    <div style="display:flex;align-items:center;gap:16px"><span class="cm-name-sm" style="font-size:22px">Amor</span><span>Amor pro beauty, Пермь, ул. Баумана, 23</span></div>
-    <div>По предварительной записи · +7 952 662-14-47</div>
+    <span class="logo">Amor <em>pro beauty</em></span>
+    <span>Пермь, ул. Баумана, 23 · по предварительной записи · +7 952 662-14-47</span>
   </div>
 </footer>
 
-<div class="demo" style="position:relative;z-index:70">Это <b>демонстрационный пример</b> сайта. Часть данных взята из открытой карточки 2ГИС, цены и фотографии подставляются после согласования.</div>
-
-<div class="mobile-bar">
-  <a class="btn btn-main" href="tel:+79526621447">Позвонить</a>
-  <a class="btn btn-ghost" href="https://vk.ru/dr_amor_pro_beauty">Написать в ВК</a>
-</div>
+<div class="demo">Это <b>демонстрационный пример</b> сайта. Данные взяты из открытой карточки 2ГИС и сообщества ВКонтакте, фотографии и реквизиты подставляются после согласования.</div>
 
 <script>
 (function(){
-  var hd=document.getElementById('hd'), cover=document.querySelector('.cover');
-  function upd(){
-    var t=cover?cover.offsetHeight-110:400;
-    hd.classList.toggle('solid', window.scrollY>t);
-  }
-  upd(); window.addEventListener('scroll',upd,{passive:true}); window.addEventListener('resize',upd);
+  var b=document.getElementById('burger'), m=document.getElementById('menu');
+  b.addEventListener('click',function(){m.classList.toggle('open')});
+  m.addEventListener('click',function(e){if(e.target.tagName==='A')m.classList.remove('open')});
+
+  var tabs=document.querySelectorAll('.tab');
+  tabs.forEach(function(t){
+    t.addEventListener('click',function(){
+      tabs.forEach(function(x){x.classList.remove('on')});
+      t.classList.add('on');
+      document.querySelectorAll('.plist').forEach(function(p){p.classList.remove('on')});
+      document.getElementById(t.dataset.t).classList.add('on');
+    });
+  });
+
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+  },{rootMargin:'0px 0px -60px 0px'});
+  document.querySelectorAll('.rv').forEach(function(e){io.observe(e)});
 })();
 </script>
 
