@@ -11,9 +11,10 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#F8F4F2; --bg-2:#F0E8E6; --card:#FFFFFF;
-  --ink:#241B1E; --ink-2:#6E5E61; --line:#E4D6D4;
-  --accent:#9E6B73; --accent-2:#82545C; --accent-soft:#F1E2E2; --brand:#9E6B73; --star:#B0873A; --deep:#241B1E;
+  --bg:#F5F0E7; --bg-2:#EBE3D5; --card:#FFFDF8;
+  --ink:#2B241B; --ink-2:#6B6152; --line:#E2D8C6;
+  --accent:#A98652; --accent-2:#8C6E41; --accent-soft:#EFE5D2; --brand:#A98652; --star:#B0873A; --deep:#2B241B;
+  --linen:#C5B9A7;
   --radius:18px;
 }
 html{scroll-behavior:smooth}
@@ -34,7 +35,7 @@ a{color:inherit}
 
 /* header */
 header{position:fixed;top:0;left:0;right:0;z-index:60;transition:background .35s,border-color .35s,box-shadow .35s;border-bottom:1px solid transparent}
-header.solid{background:rgba(248,244,242,.94);backdrop-filter:blur(12px);border-bottom-color:var(--line)}
+header.solid{background:rgba(245,240,231,.94);backdrop-filter:blur(12px);border-bottom-color:var(--line)}
 .hd{display:flex;align-items:center;gap:34px;height:82px}
 .logo{display:flex;align-items:center;opacity:0;pointer-events:none;transition:opacity .35s;text-decoration:none}
 header.solid .logo{opacity:1;pointer-events:auto}
@@ -53,21 +54,24 @@ header.solid .hd-hours{color:var(--ink-2)}
 .cover{position:relative;background:var(--deep);color:#fff;min-height:100svh;display:flex;flex-direction:column;
   justify-content:space-between;padding:118px 0 0;overflow:hidden}
 .cover::after{content:"";position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(120% 80% at 50% 8%,rgba(158,107,115,.30),transparent 62%)}
+  background:radial-gradient(120% 82% at 50% 6%,rgba(169,134,82,.34),transparent 64%)}
 .cover-in{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
   text-align:center;padding:26px 24px 40px}
+.cover-logo{width:min(660px,86vw);border-radius:16px;overflow:hidden;border:1px solid rgba(212,183,128,.42);
+  box-shadow:0 26px 60px rgba(0,0,0,.34)}
+.cover-logo img{width:100%;height:auto;display:block}
 .cover-mark-txt{text-align:center;line-height:1}
 .cm-name{font-family:'Jost',Manrope,sans-serif;font-weight:200;font-size:clamp(58px,10.4vw,146px);
   letter-spacing:.055em;color:#fff;line-height:.95}
 .cm-sub{font-family:'Jost',Manrope,sans-serif;font-weight:300;font-size:clamp(14px,2.1vw,26px);
   letter-spacing:.42em;text-transform:uppercase;color:rgba(255,255,255,.88);margin-top:16px;padding-left:.42em}
-.cm-name-sm{font-family:'Jost',Manrope,sans-serif;font-weight:300;font-size:21px;letter-spacing:.14em;color:var(--ink);text-transform:uppercase}
+.cm-name-sm{font-family:'Jost',Manrope,sans-serif;font-weight:400;font-size:20px;letter-spacing:.2em;color:var(--accent);text-transform:uppercase}
 .cover-sub{display:flex;align-items:center;gap:18px;margin-top:30px;font-size:13px;letter-spacing:.26em;
   text-transform:uppercase;color:rgba(255,255,255,.9)}
 .cover-sub span{display:block;width:44px;height:1px;background:rgba(255,255,255,.55)}
 .cover-lead{margin-top:28px;max-width:46em;font-size:17px;line-height:1.65;color:rgba(255,255,255,.78)}
 .cover-cta{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap;justify-content:center}
-.btn-light{background:#F8F1EF;color:#241B1E}
+.btn-light{background:#F2ECE1;color:#2B241B}
 .btn-light:hover{background:#fff}
 .btn-outline{border-color:rgba(255,255,255,.45);color:#fff}
 .btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.08)}
@@ -109,12 +113,12 @@ section{padding:82px 0}
 .g-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .g{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--bg-2);transition:transform .35s cubic-bezier(.2,.7,.3,1),box-shadow .35s;will-change:transform}
 .g img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;transition:transform .55s cubic-bezier(.2,.7,.3,1)}
-.g figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 16px 14px;color:#fff;font-size:13.5px;background:linear-gradient(transparent,rgba(36,27,30,.66));transition:opacity .3s}
-.g:hover{transform:translateY(-4px) scale(1.025);box-shadow:0 18px 40px rgba(60,40,45,.18);z-index:2}
+.g figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 16px 14px;color:#fff;font-size:13.5px;background:linear-gradient(transparent,rgba(43,36,27,.68));transition:opacity .3s}
+.g:hover{transform:translateY(-4px) scale(1.025);box-shadow:0 18px 40px rgba(70,55,30,.18);z-index:2}
 .g:hover img{transform:scale(1.07)}
 .ph{width:100%;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;
-  background:repeating-linear-gradient(45deg,#EFE4E3,#EFE4E3 12px,#E9DCDB 12px,#E9DCDB 24px);
-  color:#A08A8C;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+  background:repeating-linear-gradient(45deg,#EEE5D5,#EEE5D5 12px,#E6DBC7 12px,#E6DBC7 24px);
+  color:#9C8C71;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
 @media(hover:none){.g:hover{transform:none;box-shadow:none}.g:hover img{transform:none}}
 @media(prefers-reduced-motion:reduce){.g,.g img{transition:none}.g:hover{transform:none}.g:hover img{transform:none}}
 
@@ -168,7 +172,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-size:13.5px;color:va
   .g-grid{grid-template-columns:1fr 1fr}
   section{padding:60px 0}
   .logo{opacity:1;pointer-events:auto}
-  .mobile-bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;gap:10px;padding:10px 14px;background:rgba(248,244,242,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+  .mobile-bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;gap:10px;padding:10px 14px;background:rgba(245,240,231,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
   .mobile-bar .btn{flex:1;padding:13px 10px;font-size:14px}
 }
 @media(max-width:900px){.demo{padding-bottom:86px}}
@@ -199,10 +203,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-size:13.5px;color:va
 
 <section class="cover">
   <div class="cover-in">
-    <div class="cover-mark-txt">
-      <div class="cm-name">AMOR</div>
-      <div class="cm-sub">pro beauty</div>
-    </div>
+    <figure class="cover-logo"><img src="logo-hero.jpg" alt="Amor pro beauty"></figure>
     <div class="cover-sub"><span></span>Студия косметологии · Пермь<span></span></div>
     <p class="cover-lead">Врач-косметолог Анна Морохотова. Губы и филлеры, ботулотоксин, биоревитализация, плазмолифтинг, нитевой лифтинг, броулифт и блефаропластика, липоредукция. Улица Баумана, 23. Приём по предварительной записи.</p>
     <div class="cover-cta">
