@@ -58,8 +58,8 @@ header.solid .hd-hours{color:var(--muted)}
 .btn-light{background:#F6F0E5;color:var(--deep-d)}
 .btn-light:hover{background:#fff}
 header .hbtn{padding:11px 24px;font-size:14px}
-@media(max-width:1300px){.hd-hours{display:none}}
-@media(max-width:1200px){.menu{gap:16px;font-size:11.5px;letter-spacing:.10em}header .wrap{gap:22px}}
+@media(max-width:1520px){.hd-hours{display:none}}
+@media(max-width:1280px){.menu{gap:15px;font-size:11.5px;letter-spacing:.09em}header .wrap{gap:20px}}
 @media(max-width:1100px){.hd-tel{display:none}}
 @media(max-width:960px){
   .menu{display:none}
@@ -203,8 +203,8 @@ header .hbtn{padding:10px 20px;font-size:14px}
 .note{font-size:12.5px;color:var(--muted);margin-top:14px;font-weight:300}
 
 /* работы */
-.g-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,1.4vw,20px)}
-@media(max-width:860px){.g-grid{grid-template-columns:1fr 1fr}}
+.g-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,1.4vw,20px)}
+@media(max-width:1000px){.g-grid{grid-template-columns:1fr 1fr}}
 .g{border-radius:16px;overflow:hidden;border:1px solid var(--line);
    background:var(--bg2);box-shadow:var(--shadow-s)}
 .g img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
@@ -212,6 +212,39 @@ header .hbtn{padding:10px 20px;font-size:14px}
     background:repeating-linear-gradient(45deg,#F1E9DB,#F1E9DB 12px,#EAE0CE 12px,#EAE0CE 24px);
     color:#9C8C71;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
 .g figcaption{padding:14px 18px;font-size:14px;color:var(--muted);font-weight:300;border-top:1px solid var(--line)}
+
+
+/* портрет врача */
+.doc-photo{position:relative}
+.doc-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;border-radius:var(--radius);
+  border:1px solid var(--line);box-shadow:var(--shadow)}
+.doc-photo figcaption{position:absolute;left:16px;right:16px;bottom:16px;background:rgba(255,255,255,.95);
+  border-radius:14px;padding:14px 18px;box-shadow:var(--shadow-s)}
+.doc-photo b{display:block;font-family:var(--serif);font-size:20px;font-weight:600}
+.doc-photo span{font-size:13px;color:var(--muted);font-weight:300}
+
+/* как проходит приём */
+.steps-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(30px,3.4vw,58px);align-items:start}
+@media(max-width:940px){.steps-grid{grid-template-columns:1fr}}
+.steps{display:grid;gap:2px;list-style:none;margin:0;padding:0}
+.steps li{display:flex;gap:18px;align-items:flex-start;padding:20px 0;border-bottom:1px solid var(--line)}
+.steps li:last-child{border-bottom:0}
+.steps .n{flex:none;width:42px;height:42px;border-radius:50%;background:var(--deep-soft);color:var(--gold);
+  font-family:var(--serif);font-size:20px;font-weight:700;display:grid;place-items:center}
+.steps b{display:block;margin-bottom:3px;font-size:17px}
+.steps p{font-size:15px;color:var(--muted);font-weight:300}
+.steps-img img{width:100%;border-radius:var(--radius);display:block;border:1px solid var(--line);box-shadow:var(--shadow)}
+
+/* вопросы */
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:860px){.faq{grid-template-columns:1fr}}
+.faq details{align-self:start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:0 22px;box-shadow:var(--shadow-s)}
+.faq summary{cursor:pointer;list-style:none;padding:18px 0;font-weight:600;font-size:16px;
+  display:flex;justify-content:space-between;gap:14px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:'+';color:var(--gold);font-size:22px;font-weight:400;line-height:1}
+.faq details[open] summary:after{content:'\2212'}
+.faq p{padding:0 0 20px;font-size:15px;color:var(--muted);font-weight:300}
 
 /* отзывы */
 .rv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,1.6vw,24px)}
@@ -262,8 +295,10 @@ footer{background:var(--deep-d);color:rgba(232,225,214,.7);padding:30px 0;font-s
     <nav class="menu">
       <a href="#ceny">Цены</a>
       <a href="#vrach">О враче</a>
+      <a href="#priem">Приём</a>
       <a href="#raboty">Работы</a>
       <a href="#otzyvy">Отзывы</a>
+      <a href="#voprosy">Вопросы</a>
       <a href="#kontakty">Контакты</a>
     </nav>
     <div class="hd-r">
@@ -419,15 +454,16 @@ footer{background:var(--deep-d);color:rgba(232,225,214,.7);padding:30px 0;font-s
   <div class="wrap">
     <div class="sec-head rv">
       <span class="tag">О враче</span>
-      <h2>Анна <em>Морохотова</em></h2>
+      <h2>Анна Александровна <em>Морохотова</em></h2>
+      <p>Врач-косметолог, ведёт приём в студии Amor pro beauty на улице Баумана, 23.</p>
     </div>
     <div class="doc-grid">
       <div class="doc-txt rv">
-        <div class="q-big">Твоя фея стройности, молодости и красоты</div>
-        <div class="q-from">Из закреплённой записи сообщества</div>
-        <p>Приём ведёт врач-косметолог Анна Морохотова. Направления студии: броулифт и блефаропластика, инъекционная косметология, липоредукция, увеличение ягодиц, лазерная эпиляция, татуаж.</p>
-        <p>Студия работает в Индустриальном районе Перми, на первом этаже дома по улице Баумана, 23. Приём по предварительной записи, свободное время подскажут по телефону или в сообщениях.</p>
-        <p>Сообщество ВКонтакте ведётся с 2016 года: в нём 1 484 подписчика и больше тысячи фотографий работ.</p>
+        <div class="q-big">Красота - это не про кардинальные изменения, а про гармонию, естественность и уверенность в себе</div>
+        <div class="q-from">Анна Морохотова, из записи в сообществе</div>
+        <p>«Мой путь в косметологии - это постоянное развитие, опыт и любовь к своему делу. В работе я всегда выбираю индивидуальный подход, внимательно отношусь к особенностям каждого пациента и стремлюсь к максимально естественному результату».</p>
+        <p>«За плечами большой опыт успешной работы и множество довольных пациентов. Для меня важно не просто выполнить процедуру, а помочь человеку почувствовать себя ещё красивее и увереннее».</p>
+        <p>Направления студии: броулифт и блефаропластика, инъекционная косметология, липоредукция, увеличение ягодиц, лазерная эпиляция, татуаж. Сообщество ВКонтакте ведётся с 2016 года, в нём 1 484 подписчика и больше тысячи фотографий работ.</p>
         <div class="doc-facts">
           <div><b>Баумана, 23</b><span>первый этаж, Индустриальный район</span></div>
           <div><b>600 метров</b><span>от остановки «9 Мая»</span></div>
@@ -435,66 +471,103 @@ footer{background:var(--deep-d);color:rgba(232,225,214,.7);padding:30px 0;font-s
           <div><b>Гарантия</b><span>результата и качества услуг</span></div>
         </div>
       </div>
-      <div class="card rv">
-        <h3>Записаться на приём</h3>
-        <p class="sub">Опишите, что хотите сделать, и доктор подскажет, какая процедура подойдёт и сколько понадобится сеансов.</p>
-        <div class="acts">
-          <a class="btn btn-gold" href="tel:+79526621447">Позвонить +7 952 662-14-47</a>
-          <a class="btn" href="https://vk.ru/dr_amor_pro_beauty" target="_blank" rel="noopener">Написать во ВКонтакте</a>
-          <a class="btn btn-line" href="https://t.me/+79526621447" target="_blank" rel="noopener">Написать в Telegram</a>
-          <a class="btn btn-line" href="https://2gis.ru/perm/firm/70000001035677915" target="_blank" rel="noopener">Открыть на карте 2ГИС</a>
-        </div>
-        <p class="note">Форм на сайте нет: запись только напрямую, чтобы заявка не потерялась.</p>
-      </div>
+      <figure class="doc-photo rv">
+        <img src="doctor.jpg" alt="Врач-косметолог Анна Морохотова">
+        <figcaption><b>Анна Морохотова</b><span>врач-косметолог, Amor pro beauty</span></figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
-<section id="raboty">
+<section id="priem">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="tag">Работы</span>
-      <h2>Кабинет и <em>результаты</em></h2>
-      <p>Здесь встанут фотографии кабинета и согласованные снимки «до и после». В сообществе ВКонтакте выложено больше тысячи работ.</p>
+      <span class="tag">Как проходит приём</span>
+      <h2>Четыре шага <em>без сюрпризов</em></h2>
+      <p>Никаких форм на сайте: запись идёт напрямую, чтобы заявка не потерялась.</p>
     </div>
-    <div class="g-grid rv">
-      <figure class="g"><div class="ph">фото 1</div><figcaption>Кабинет</figcaption></figure>
-      <figure class="g"><div class="ph">фото 2</div><figcaption>Работа с губами</figcaption></figure>
-      <figure class="g"><div class="ph">фото 3</div><figcaption>Броулифт и веки</figcaption></figure>
-      <figure class="g"><div class="ph">фото 4</div><figcaption>Биоревитализация</figcaption></figure>
-      <figure class="g"><div class="ph">фото 5</div><figcaption>Липоредукция</figcaption></figure>
-      <figure class="g"><div class="ph">фото 6</div><figcaption>Студия внутри</figcaption></figure>
+    <div class="steps-grid">
+      <ol class="steps rv">
+        <li><span class="n">1</span><div><b>Запись</b><p>Звоните или пишете в сообщения. Свободное время подскажут сразу: в сообществе отвечают в среднем за пять минут.</p></div></li>
+        <li><span class="n">2</span><div><b>Консультация</b><p>Врач осматривает, уточняет противопоказания и подбирает процедуру и объём препарата. Консультация стоит 1 000 ₽.</p></div></li>
+        <li><span class="n">3</span><div><b>Процедура</b><p>Работа идёт по согласованному плану. Итоговую стоимость называют до начала, она зависит от зоны и объёма.</p></div></li>
+        <li><span class="n">4</span><div><b>Курс, если он нужен</b><p>Часть процедур эффективнее курсом: плазмолифтинг идёт по 5 и 8 сеансов, капельница «Золушка» курсом из 5. Курс считают заранее и он выходит дешевле разовых.</p></div></li>
+      </ol>
+      <div class="steps-img rv"><img src="banner.jpg" alt="Amor pro beauty, современная косметология"></div>
     </div>
-    <!-- ФОТО: заменить <div class="ph">…</div> на <img src="g-1.jpg" alt="…"> и так далее -->
   </div>
 </section>
 
-<section class="light" id="otzyvy">
+<section class="light" id="raboty">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="tag">Работы и студия</span>
+      <h2>Как это выглядит <em>вживую</em></h2>
+      <p>Фотографии из сообщества ВКонтакте, где выложено больше тысячи работ.</p>
+    </div>
+    <div class="g-grid rv">
+      <figure class="g"><img src="g-guby-1.jpg" alt="Губы после увеличения филлером"><figcaption>Губы, филлер</figcaption></figure>
+      <figure class="g"><img src="g-guby-2.jpg" alt="Результат работы с губами"><figcaption>Губы, результат</figcaption></figure>
+      <figure class="g"><img src="g-priem.jpg" alt="Подготовка к процедуре в кабинете"><figcaption>Подготовка к процедуре</figcaption></figure>
+      <figure class="g"><img src="g-kabinet.jpg" alt="Кабинет студии Amor pro beauty"><figcaption>Кабинет студии</figcaption></figure>
+    </div>
+    <p class="upd">Фотографии опубликованы студией в открытом сообществе. Перед публикацией на сайте согласуйте снимки с пациентами.</p>
+  </div>
+</section>
+
+<section id="otzyvy">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="tag">Отзывы</span>
       <h2>Что пишут <em>клиенты</em></h2>
-      <p>Отзывы из карточки 2ГИС, средняя оценка 5,0 на 22 оценках.</p>
+      <p>Отзывы из карточки 2ГИС: 22 оценки, средний балл 5,0, отрицательных нет.</p>
     </div>
     <div class="rv-grid rv">
-      <div class="r">
-        <div class="stars">★★★★★</div>
+      <div class="r"><div class="stars">★★★★★</div>
         <p>Была на липоредукции тела, сделали несколько зон, всё идеально. Советую.</p>
-        <div class="who">Инна Шишкина</div>
-        <div class="when">2ГИС, отзыв подтверждён</div>
-      </div>
-      <div class="r">
-        <div class="stars">★★★★★</div>
+        <div class="who">Инна Шишкина</div><div class="when">2ГИС, отзыв подтверждён</div></div>
+      <div class="r"><div class="stars">★★★★★</div>
         <p>Была на процедуре липоредукции живота первый раз. Анна профессионал своего дела.</p>
-        <div class="who">Анастасия Чупина</div>
-        <div class="when">2ГИС</div>
-      </div>
-      <div class="r">
-        <div class="stars">★★★★★</div>
+        <div class="who">Анастасия Чупина</div><div class="when">2ГИС</div></div>
+      <div class="r"><div class="stars">★★★★★</div>
+        <p>Всё отлично, Анна прекрасный специалист.</p>
+        <div class="who">Максим Волобуев</div><div class="when">2ГИС</div></div>
+      <div class="r"><div class="stars">★★★★★</div>
+        <p>Хожу к косметологу Анне, честно от Бога.</p>
+        <div class="who">Наталья Меркурьева</div><div class="when">2ГИС</div></div>
+      <div class="r"><div class="stars">★★★★★</div>
         <p>Прошла курс LPG-массажа у мастера Юлии. Пришлось покупать одежду на размер меньше.</p>
-        <div class="who">Фея</div>
-        <div class="when">2ГИС</div>
-      </div>
+        <div class="who">Фея</div><div class="when">2ГИС</div></div>
+      <div class="r"><div class="stars">★★★★★</div>
+        <p>Лазеротерапевт Татьяна очень заботливо относится к клиентам.</p>
+        <div class="who">Ольга</div><div class="when">2ГИС</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="light" id="voprosy">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="tag">Вопросы</span>
+      <h2>Что спрашивают <em>чаще всего</em></h2>
+    </div>
+    <div class="faq rv">
+      <details open><summary>Как записаться?</summary>
+        <p>Позвоните по номеру +7 952 662-14-47 или напишите в сообщения сообщества ВКонтакте либо в Telegram. Онлайн-записи нет, время согласуют в переписке. В сообществе отвечают в среднем за пять минут.</p></details>
+      <details><summary>Сколько стоит консультация?</summary>
+        <p>Консультация врача-косметолога стоит 1 000 ₽. На ней врач осматривает, уточняет противопоказания и подбирает процедуру.</p></details>
+      <details><summary>Почему на сайте написано «от»?</summary>
+        <p>Стоимость зависит от объёма препарата, зоны и количества единиц. Например, ботулотоксин считается по единицам, мононити - поштучно. Точную сумму называют на консультации, до начала процедуры.</p></details>
+      <details><summary>Можно ли пройти курсом?</summary>
+        <p>Да. Плазмолифтинг идёт курсами по 5 и 8 процедур, капельница «Золушка» - курсом из 5. Курс выходит дешевле, чем те же процедуры по отдельности.</p></details>
+      <details><summary>Есть ли скидки?</summary>
+        <p>Действует гибкая система скидок и пакеты услуг. Актуальные условия уточняйте при записи: они меняются.</p></details>
+      <details><summary>Как оплатить и где припарковаться?</summary>
+        <p>Оплата картой, наличными, переводом или по QR-коду. Рядом со студией шесть парковочных мест, остановка «9 Мая» в 600 метрах.</p></details>
+      <details><summary>Есть ли противопоказания?</summary>
+        <p>Да, у инъекционных и аппаратных процедур есть противопоказания. Их перечень врач уточняет на консультации, поэтому очный приём обязателен.</p></details>
+      <details><summary>Кто ещё принимает в студии?</summary>
+        <p>Кроме врача-косметолога, по отзывам клиентов в студии работают мастер массажа и LPG Юлия и лазеротерапевт Татьяна.</p></details>
     </div>
   </div>
 </section>
@@ -550,7 +623,7 @@ footer{background:var(--deep-d);color:rgba(232,225,214,.7);padding:30px 0;font-s
         <h3>Исполнитель услуг</h3>
         <p>
           Наименование: <b>[указать: ИП / ООО, полное наименование]</b><br>
-          ФИО: Морохотова Анна <b>[отчество уточнить]</b><br>
+          ФИО: Морохотова Анна Александровна<br>
           ИНН: <b>[указать]</b> · ОГРНИП/ОГРН: <b>[указать]</b><br>
           Адрес оказания услуг: 614066, Пермский край, г. Пермь, ул. Баумана, 23, первый этаж<br>
           Телефон: <a href="tel:+79526621447">+7 952 662-14-47</a><br>
