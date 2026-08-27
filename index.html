@@ -7,7 +7,7 @@
 <meta name="description" content="Amor pro beauty, Пермь, улица Баумана 23. Врач-косметолог Анна Морохотова: губы и филлеры, ботулотоксин, биоревитализация, плазмолифтинг, нити, броулифт и блефаропластика, липоредукция. Открытый прайс, рейтинг 5,0 в 2ГИС.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Jost:wght@200;300;400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%232b241b'/><text x='32' y='46' font-size='34' font-family='Georgia,serif' text-anchor='middle' fill='%23b08b4f'>A</text></svg>">
 <style>
 :root{
@@ -40,10 +40,9 @@ section{padding:clamp(56px,6.2vw,112px) 0}
 header{position:fixed;top:0;left:0;right:0;z-index:80;border-bottom:1px solid transparent;
        transition:background .35s,border-color .35s}
 header.solid{background:rgba(250,246,239,.94);backdrop-filter:blur(12px);border-bottom-color:var(--line)}
-header .wrap{display:flex;align-items:center;gap:32px;height:82px}
-.logo{font-family:var(--serif);font-size:23px;font-weight:700;letter-spacing:.01em;text-decoration:none;
-      white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .35s;color:var(--ink)}
-.logo em{font-style:italic;color:var(--gold)}
+header .wrap{display:flex;align-items:center;gap:28px;height:82px}
+.logo{font-family:'Jost',var(--sans);font-size:17px;font-weight:300;letter-spacing:.11em;text-transform:uppercase;
+      text-decoration:none;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .35s;color:var(--ink)}
 header.solid .logo{opacity:1;pointer-events:auto}
 .menu{display:flex;gap:30px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;
       color:rgba(255,255,255,.88)}
@@ -66,9 +65,7 @@ header .hbtn{padding:11px 24px;font-size:14px}
   .menu{display:none}
   header .wrap{height:70px}
   .logo{opacity:1;pointer-events:auto;color:#fff}
-  .logo em{color:var(--gold-lt)}
   header.solid .logo{color:var(--ink)}
-  header.solid .logo em{color:var(--gold)}
 }
 @media(max-width:600px){.hd-tel{display:none}}
 
@@ -252,17 +249,17 @@ header .hbtn{padding:10px 20px;font-size:14px}
 
 footer{background:var(--deep-d);color:rgba(232,225,214,.7);padding:30px 0;font-size:14px;font-weight:300}
 .ft{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
-.ft .logo{color:#fff;font-size:21px}
+.ft .logo{color:#fff;font-size:19px;opacity:1;pointer-events:auto;font-family:'Jost',var(--sans);
+          font-weight:300;letter-spacing:.16em;text-transform:uppercase}
 </style>
 </head>
 <body>
 
 <header id="hd">
   <div class="wrap">
-    <a class="logo" href="#top">Amor <em>pro beauty</em></a>
+    <a class="logo" href="#top">Amor pro beauty</a>
     <nav class="menu">
       <a href="#ceny">Цены</a>
-      <a href="#pochemu">Почему сюда</a>
       <a href="#vrach">О враче</a>
       <a href="#raboty">Работы</a>
       <a href="#otzyvy">Отзывы</a>
@@ -597,7 +594,7 @@ footer{background:var(--deep-d);color:rgba(232,225,214,.7);padding:30px 0;font-s
 
 <footer>
   <div class="wrap ft">
-    <span class="logo">Amor <em>pro beauty</em></span>
+    <span class="logo">Amor pro beauty</span>
     <span>Пермь, ул. Баумана, 23 · по предварительной записи · +7 952 662-14-47</span>
   </div>
 </footer>
